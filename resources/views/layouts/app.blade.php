@@ -33,8 +33,77 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    categories </a>
+                     <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{route('categories.index')}}">All categories</a>
+                  <a class="dropdown-item" href="{{route ('categories.create')}}">Add categories</a>
+                     </div>
+                   </li>
+                   <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Brands
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{route('brands.index')}}">All brands</a>
+                            <a class="dropdown-item" href="{{ route ('brands.create')  }}">Add brands</a>
+                          </div>
+                        </li>
 
-                    </ul>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Products
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ route('products.index')}}">All products</a>
+                            <a class="dropdown-item" href="{{ route('products.create')  }}">Add products</a>
+                          </div>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Images
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ route ('images.index') }}">All images</a>
+                            <a class="dropdown-item" href="{{ route('images.create')  }}">Add images</a>
+                          </div>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Calibers
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ route ('calibers.index') }}">All Calibers</a>
+                            <a class="dropdown-item" href="{{ route('calibers.create')  }}">Add Calibers</a>
+                          </div>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Team
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{route('teams.index')}}">All Team</a>
+                            <a class="dropdown-item" href="{{ route ('teams.create')  }}">Add Team</a>
+                          </div>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Pharmacy
+                          </a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{route('pharmacies.index')}}">All Pharmacies</a>
+                            <a class="dropdown-item" href="{{ route ('pharmacies.create')  }}">Add Pharmacy</a>
+                          </div>
+                        </li>
+                   </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

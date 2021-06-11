@@ -12,21 +12,66 @@
 */
 
 Route::get('/', 'pagescontroller@index');
-Route::get('/about', 'pagescontroller@about');
-Route::get('/contact', 'pagescontroller@contact');
-Route::get('/welcome', 'pagescontroller@welcome');
-Route::get('/thankyou', 'pagescontroller@thankyou');
-Route::get('/cart', 'pagescontroller@cart');
-Route::get('/home', 'pagescontroller@home');
-
-
-
-
-
-
-
-
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/categories/create', 'Categoriescontroller@create')->name('categories.create');
+Route::get('/categories', 'Categoriescontroller@index')->name('categories.index');
+Route::get('/categories/{id}', 'Categoriescontroller@destroy')->name('categories.destroy');
+Route::get('/categories/{id}/edit', 'Categoriescontroller@edit')->name('categories.edit');
+Route::post('/categories/{id}/update', 'Categoriescontroller@update')->name('categories.update');
+Route::post('/categories/store', 'Categoriescontroller@store')->name('categories.store');
+Route::get('/products/create', 'Productscontroller@create')->name('products.create');
+Route::get('/products', 'Productscontroller@index')->name('products.index');
+Route::get('/products/{id}', 'Productscontroller@destroy')->name('products.destroy');
+Route::get('/products/{id}/edit', 'Productscontroller@edit')->name('products.edit');
+Route::post('/products/{id}/update', 'Productscontroller@update')->name('products.update');
+Route::post('/products/store', 'Productscontroller@store')->name('products.store');
+Route::get('/brands/create', 'Brandscontroller@create')->name('brands.create');
+Route::get('/brands', 'Brandscontroller@index')->name('brands.index');
+Route::get('/brands/{id}', 'Brandscontroller@destroy')->name('brands.destroy');
+Route::get('/brands/{id}/edit', 'Brandscontroller@edit')->name('brands.edit');
+Route::post('/brands/{id}/update', 'Brandscontroller@update')->name('brands.update');
+Route::post('/brands/store', 'Brandscontroller@store')->name('brands.store');
+Route::get('/images/create', 'Imagescontroller@create')->name('images.create');
+Route::get('/images', 'Imagescontroller@index')->name('images.index');
+Route::get('/images/{id}', 'Imagescontroller@destroy')->name
+('images.destroy');
+Route::get('/images/{id}/edit', 'Imagescontroller@edit')->name
+('images.edit');
+Route::post('/images/{id}/update', 'Imagescontroller@update')->name
+('images.update');
+Route::post('/images/store', 'Imagescontroller@store')->name
+('images.store');
+Route::get('/calibers/create', 'Caliberscontroller@create')->name('calibers.create');
+Route::get('/calibers', 'Caliberscontroller@index')->name('calibers.index');
+Route::get('/calibers/{id}', 'Caliberscontroller@destroy')->name
+('calibers.destroy');
+Route::get('/calibers/{id}/edit', 'Caliberscontroller@edit')->name
+('calibers.edit');
+Route::post('/calibers/{id}/update', 'Caliberscontroller@update')->name
+('calibers.update');
+Route::post('/calibers/store', 'Caliberscontroller@store')->name
+('calibers.store');
+Route::get('/teams/create', 'Teamscontroller@create')->name('teams.create');
+Route::get('/teams', 'Teamscontroller@index')->name('teams.index');
+Route::get('/teams/{id}', 'Teamscontroller@destroy')->name
+('teams.destroy');
+Route::get('/teams/{id}/edit', 'Teamscontroller@edit')->name
+('teams.edit');
+Route::post('/teams/{id}/update', 'Teamscontroller@update')->name
+('teams.update');
+Route::post('/teams/store', 'Teamscontroller@store')->name
+('teams.store');
+Route::get('/pharmacies/create', 'pharmaciescontroller@create')->name('pharmacies.create');
+Route::get('/pharmacies', 'pharmaciescontroller@index')->name('pharmacies.index');
+Route::get('/pharmacies/{id}', 'pharmaciescontroller@destroy')->name
+('pharmacies.destroy');
+Route::get('/pharmacies/{id}/edit', 'pharmaciescontroller@edit')->name
+('pharmacies.edit');
+Route::post('/pharmacies/{id}/update', 'pharmaciescontroller@update')->name
+('pharmacies.update');
+Route::post('/pharmacies/store', 'pharmaciescontroller@store')->name
+('pharmacies.store');
+
