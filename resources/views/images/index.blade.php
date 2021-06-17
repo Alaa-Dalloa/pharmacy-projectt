@@ -8,13 +8,16 @@
             <tr>
               <th>ID</th>
               <th>Images</th>
+              <th>product_id</th>
               <th>Controller</th>
             </tr>
           </thead>
           <tbody>
-          	@foreach($images as $image)
+          	@foreach( $images as $image)
             <tr>
               <td>{{ $image->id }}</td>
+              <td>{{ $image->photoName }}</td>
+              <td>{{ $image->product_id }}</td>
               
               <td>
               	<a href="/images/{{ $image->id }}/edit" class="btn btn-success">Edit</a>

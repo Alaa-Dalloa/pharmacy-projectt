@@ -3,32 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
+use App\product;
+use App\catigory;
+use App\brand;
 class Productscontroller extends Controller
 {
     public function create ()
     {
-
-    	   return view ('products.create');
-
+         $categories= catigory::all();
+         $brands= brand::all(); 
+    	   return view ('products.create' , compact ('categories'), compact ('brands'));  
     }
     public function store (Request $request)
     {
-      $Product= new Product ;
-      $Product->name=$request->name;
-      $Product->name_trade=$request->name_trade;
-      $Product->price=$request->price;
-      $Product->count=$request->count;
-      $Product->size=$request->size;
-      $Product->start_date=$request->start_date;
-      $Product->end_date=$request->end_date;
-      $Product->detailes=$request->detailes;
-      $Product->warning_using=$request->warning_using;
-      $Product->offers=$request->offers;
-      $Product->catigory_id=$request->catigory_id;
-      $Product->brand_id=$request->brand_id;
+      $product      = new product ;
+      $product->name=$request->name;
+      $product->name_trade=$request->name_trade;
+      $product->price     =$request->price;
+      $product->count     =$request->count;
+      $product->size      =$request->size;
+      $product->start_date=$request->start_date;
+      $product->end_date  =$request->end_date;
+      $product->detailes  =$request->detailes;
+      $product->warning_using=$request->warning_using;
+      $product->offers    =$request->offers;
+      $product->catigory_id=$request->catigory_id;
+      $product->brand_id   =$request->brand_id;
       
-	  $Product->save();   
+	  $product->save();   
       return back();
 
     }
@@ -45,30 +47,29 @@ class Productscontroller extends Controller
      return back();
    }
    public function edit ($id)
-{
+  {
 	$product= product::find($id);
-	return view ('products.edit' ,compact('product'));
-}
+	return view ('products.edit' , compact('product'));
+  }
 public function update($id , Request $request)
 
 { 
       $product= product::find($id);
-      $Product->name=$request->name;
-      $Product->name_trade=$request->name_trade;
-      $Product->price=$request->price;
-      $Product->count=$request->count;
-      $Product->size=$request->size;
-      $Product->start_date=$request->start_date;
-      $Product->end_date=$request->end_date;
-      $Product->detailes=$request->detailes;
-      $Product->warning_using=$request->warning_using;
-      $Product->offers=$request->offers;
-      
-	  $Product->save();  
-	  return back (); 
+      $product->name      =$request->name;
+      $product->name_trade=$request->name_trade;
+      $product->price     =$request->price;
+      $product->count     =$request->count;
+      $product->size      =$request->size;
+      $product->start_date=$request->start_date;
+      $product->end_date  =$request->end_date;
+      $product->detailes  =$request->detailes;
+      $product->warning_using=$request->warning_using;
+      $product->offers      =$request->offers;
+      $product->catigory_id=$request->catigory_id;
+      $product->brand_id   =$request->brand_id;
+  
+	     $product->save();  
+	     return back (); 
 }
-
-
-
 
 }

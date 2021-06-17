@@ -10,7 +10,6 @@ class Categoriescontroller extends Controller
  public function create ()
  {
    return view ('categories.create');
-
  }
  public function store(Request $request)
  {

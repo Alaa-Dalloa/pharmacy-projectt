@@ -16,7 +16,7 @@
           	@foreach($calibers as $caliber)
             <tr>
               <td>{{ $caliber->id }}</td>
-              <td>{{ $caliber->caliber }}</td>
+              <td>{{ $caliber->name }}</td>
               <td>{{ $product_id->product_id }}</td>
               <td>
               	<a href="/calibers/{{ $caliber->id }}/edit" class="btn btn-success">Edit</a>

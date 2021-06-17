@@ -4,17 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\caliber;
+use App\product;
 class Caliberscontroller extends Controller
 {
     public function create ()
-    {
-       return view ('calibers.create');
+    {  
+       $products= product::all();
+       return view ('calibers.create' , compact('products'));
 
     }
     public function store (Request $request)
     {
       $caliber= new caliber ;
       $caliber->caliber = $request->caliber ;
+      $caliber->product_id=$request->product_id;
       $caliber->save();   
       return back();
     }
@@ -40,8 +43,8 @@ public function edit ($id)
 public function update($id , Request $request)
 {
     $caliber= caliber::find($id);
-    $caliber->product_id=$request->product_id;
     $caliber->caliber=$request->caliber;
+    $caliber->product_id=$request->product_id;
     $caliber-> save();
     return back();
 }

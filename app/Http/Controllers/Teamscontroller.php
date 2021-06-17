@@ -20,9 +20,11 @@ class Teamscontroller extends Controller
       $team->email=$request->email;
       $team->position=$request->position;
       $team->bio=$request->bio;
-      $team->image=$request->image;
-      
-	  $team->save();   
+      //geerate a new name
+      $photoName =rand().time().'.'.$request->image->getClientOriginalExtension();
+      $request->image->move(public_path('upload'), $photoName);
+      $team->image=$photoName ;
+	    $team->save();   
       return back();
 
     }
@@ -52,7 +54,9 @@ public function update($id , Request $request)
       $team->email=$request->email;
       $team->position=$request->position;
       $team->bio=$request->bio;
-      $team->image=$request->image;
+      $photoName =rand().time().'.'.$request->image->getClientOriginalExtension();
+      $request->image->move(public_path('upload'), $photoName);
+      $team->image=$photoName ;
       
 	  $team->save();   
       return back();
