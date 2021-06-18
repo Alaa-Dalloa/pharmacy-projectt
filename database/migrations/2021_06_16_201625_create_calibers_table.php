@@ -15,7 +15,8 @@ class CreateCalibersTable extends Migration
     {
         Schema::create('calibers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('product_id');
+             $table->string('caliber');
+              $table->bigInteger('product_id');
             $table->timestamps();
         });
     }
