@@ -3,7 +3,8 @@
 <div class= "container">
    <h1 class="text-center">Edit Teams</h1>
   <div class="box">
-	  	<form action="/teams/{{ $team->id}}/update" method="POST" enctype="multipart/form-data">
+	  	<form action="/teams/{{ $team->id}}/update" method="POST" 
+	  		enctype="multipart/form-data">
 	  		  @csrf
 	   <div class="form-group">
 	    <label for="name">Name:</label>

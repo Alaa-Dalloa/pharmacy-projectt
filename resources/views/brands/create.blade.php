@@ -3,7 +3,7 @@
 <div class= "container">
    <h1 class="text-center">Add Brands</h1>
   <div class="box">
-	<form action=" {{ route ('brands.store') }}"  method="POST">
+	<form action=" {{ route ('brands.store') }}"  method="POST" enctype="multipart/form-data">
 	  @csrf
 	  <div class="form-group">
 	    <label for="name">Name:</label>

@@ -34,16 +34,16 @@ Route::get('/brands/{id}', 'Brandscontroller@destroy')->name('brands.destroy');
 Route::get('/brands/{id}/edit', 'Brandscontroller@edit')->name('brands.edit');
 Route::post('/brands/{id}/update', 'Brandscontroller@update')->name('brands.update');
 Route::post('/brands/store', 'Brandscontroller@store')->name('brands.store');
-Route::get('/images/create', 'Imagescontroller@create')->name('images.create');
-Route::get('/images', 'Imagescontroller@index')->name('images.index');
-Route::get('/images/{id}', 'Imagescontroller@destroy')->name
-('images.destroy');
-Route::get('/images/{id}/edit', 'Imagescontroller@edit')->name
-('images.edit');
-Route::post('/images/{id}/update', 'Imagescontroller@update')->name
-('images.update');
-Route::post('/images/store', 'Imagescontroller@store')->name
-('images.store');
+Route::get('/photos/create', 'Imagescontroller@create')->name('photos.create');
+Route::get('/photos', 'Imagescontroller@index')->name('photos.index');
+Route::get('/photos/{id}', 'Imagescontroller@destroy')->name
+('photos.destroy');
+Route::get('/photos/{id}/edit', 'Imagescontroller@edit')->name
+('photos.edit');
+Route::post('/photos/{id}/update', 'Imagescontroller@update')->name
+('photos.update');
+Route::post('/photos/store', 'Imagescontroller@store')->name
+('photos.store');
 Route::get('/calibers/create', 'Caliberscontroller@create')->name('calibers.create');
 Route::get('/calibers', 'Caliberscontroller@index')->name('calibers.index');
 Route::get('/calibers/{id}', 'Caliberscontroller@destroy')->name

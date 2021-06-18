@@ -3,11 +3,13 @@
 <div class= "container">
    <h1 class="text-center">Add pharmacy</h1>
   <div class="box">
-	  	<form action="{{ route ('pharmacies.store') }}" method="POST" enctype="multipart/form-data">
+	  	<form action="{{ route ('pharmacies.store') }}" method="POST" 
+	  	enctype="multipart/form-data">
 	  	@csrf
 	  <div class="form-group">
 	    <label for="name">Name:</label>
-	    <input type="string" class="form-control" placeholder="Enter name" id="name" name="name">
+	    <input type="string" class="form-control" placeholder="Enter name" id="name" 
+	    name="name" >
 	  </div>
 	  <div class="form-group">
 	    <label for="adress">Adress:</label>

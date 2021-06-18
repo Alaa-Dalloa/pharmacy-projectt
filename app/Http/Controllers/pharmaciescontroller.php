@@ -48,7 +48,7 @@ public function update($id , Request $request)
       $pharmacy->adress=$request->adress;
       $pharmacy->email=$request->email;
       $pharmacy->about_us=$request->about_us; 
-	  $pharmacy->save();   
+	    $pharmacy->save();   
       return back();
 
 }

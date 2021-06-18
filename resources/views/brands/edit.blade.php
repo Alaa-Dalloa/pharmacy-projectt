@@ -3,7 +3,7 @@
 <div class= "container">
    <h1 class="text-center">Edit brand</h1>
   <div class="box">
-	<form action="/brands/{{ $brand->id }}/update" method="POST">
+	<form action="/brands/{{ $brand->id }}/update" method="POST" enctype="multipart/form-data">
 	  @csrf
 	  <div class="form-group">
 	    <label for="name">Name:</label>

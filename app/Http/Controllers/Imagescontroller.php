@@ -10,7 +10,7 @@ class Imagescontroller extends Controller
     public function create ()
     {
       $products = product::all();
-       return view ('images.create' , compact('products'));
+       return view ('photos.create' , compact('products'));
 
     }
     public function store (Request $request)
@@ -27,8 +27,8 @@ class Imagescontroller extends Controller
     public function index ()
     {
 
-    	$images = image::all();
-      return view ('images.index' , compact('images'));
+    	$photos = image::all();
+      return view ('photos.index' , compact('photos'));
     }
     public function destroy($id)
 {
@@ -40,7 +40,7 @@ class Imagescontroller extends Controller
 public function edit ($id)
 {
    $image= image::find($id);
-   return view ('images.edit' , compact('image'));
+   return view ('photos.edit' , compact('image'));
 
 }
 public function update($id , Request $request)

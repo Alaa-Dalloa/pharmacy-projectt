@@ -36,7 +36,7 @@
                         <!-- Dropdown -->
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    categories </a>
+                    Categories </a>
                      <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{route('categories.index')}}">All categories</a>
                   <a class="dropdown-item" href="{{route ('categories.create')}}">Add categories</a>
@@ -66,11 +66,11 @@
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            Images
+                            Photos
                           </a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route ('images.index') }}">All images</a>
-                            <a class="dropdown-item" href="{{ route('images.create')  }}">Add images</a>
+                            <a class="dropdown-item" href="{{ route ('photos.index') }}">All photos</a>
+                            <a class="dropdown-item" href="{{ route('photos.create')  }}">Add photos</a>
                           </div>
                         </li>
                         <!-- Dropdown -->

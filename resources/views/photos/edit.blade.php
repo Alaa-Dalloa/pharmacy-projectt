@@ -3,10 +3,10 @@
 <div class= "container">
    <h1 class="text-center">Edit image</h1>
   <div class="box">
-	<form action="/images/{{ $image->id }}/update" method="POST">
+	<form action="/photos/{{ $image->id }}/update" method="POST" enctype="multipart/form-data">
 	  @csrf
 	 <div class="form-group">
-	    <label for="image">Image:</label>
+	    <label for="image">Photo:</label>
 	    <input type="file" class="form-control" name="image">
 	  </div>
 	  <div class="form-group">

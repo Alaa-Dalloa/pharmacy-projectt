@@ -32,7 +32,7 @@
 	  </div>
 	  <div class="form-group">
 	    <label for="start_date">Start date:</label>
-	    <input type="string" class="form-control" placeholder="Enter start_date" id="start_date" name="start_date" value="{{ $product->start_date}}>
+	    <input type="string" class="form-control" placeholder="Enter start_date" id="start_date" name="start_date" value="{{ $product->start_date}}">
 	  </div>
 	  <div class="form-group">
 	    <label for="end_date">End date:</label>
