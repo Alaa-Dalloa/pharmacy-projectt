@@ -47,9 +47,12 @@ class Productscontroller extends Controller
      return back();
    }
    public function edit ($id)
+
   {
+  $categories=catigory::find($id);
+  $brands= brand::find($id);
 	$product= product::find($id);
-	return view ('products.edit' , compact('product'));
+	return view ('products.edit' , compact('product') , compact ('categories'), compact ('brands') );
   }
 public function update($id , Request $request)
 
