@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'pagescontroller@index');
+Route::get('/login', 'pagescontroller@login')->name('auth.login');
 
 Auth::routes();
 
@@ -44,16 +45,16 @@ Route::post('/photos/{id}/update', 'Imagescontroller@update')->name
 ('photos.update');
 Route::post('/photos/store', 'Imagescontroller@store')->name
 ('photos.store');
-Route::get('/calibers/create', 'Caliberscontroller@create')->name('calibers.create');
-Route::get('/calibers', 'Caliberscontroller@index')->name('calibers.index');
-Route::get('/calibers/{id}', 'Caliberscontroller@destroy')->name
-('calibers.destroy');
-Route::get('/calibers/{id}/edit', 'Caliberscontroller@edit')->name
-('calibers.edit');
-Route::post('/calibers/{id}/update', 'Caliberscontroller@update')->name
-('calibers.update');
-Route::post('/calibers/store', 'Caliberscontroller@store')->name
-('calibers.store');
+Route::get('/gauges/create', 'Caliberscontroller@create')->name('gauges.create');
+Route::get('/gauges', 'Caliberscontroller@index')->name('gauges.index');
+Route::get('/gauges/{id}', 'Caliberscontroller@destroy')->name
+('gauges.destroy');
+Route::get('/gauges/{id}/edit', 'Caliberscontroller@edit')->name
+('gauges.edit');
+Route::post('/gauges/{id}/update', 'Caliberscontroller@update')->name
+('gauges.update');
+Route::post('/gauges/store', 'Caliberscontroller@store')->name
+('gauges.store');
 Route::get('/teams/create', 'Teamscontroller@create')->name('teams.create');
 Route::get('/teams', 'Teamscontroller@index')->name('teams.index');
 Route::get('/teams/{id}', 'Teamscontroller@destroy')->name

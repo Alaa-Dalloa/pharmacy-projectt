@@ -3,55 +3,59 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\image;
-use App\product;
+use App\Photo;
+use App\Product;
+use App\Team;
 class Imagescontroller extends Controller
 {
     public function create ()
     {
       $products = product::all();
-       return view ('photos.create' , compact('products'));
+      $teams = team::all();
+       return view ('photos.create' , compact('products') , compact('teams'));
 
     }
     public function store (Request $request)
     {
 
-      $image= new image ;
-      $photoName =rand().time().'.'.$request->image->getClientOriginalExtension();
-      $request->image->move(public_path('upload'), $photoName );
-      $image->image=$photoName ;
-      $image->product_id=$request->product_id;
-      $image->save();   
+      $photo= new photo ;
+      $photoName =rand().time().'.'.$request->photo->getClientOriginalExtension();
+      $request->photo->move(public_path('upload'), $photoName );
+      $photo->photo=$photoName ;
+      $photo->product_id=$request->product_id;
+      $photo->team_id=$request->team_id;
+      $photo->save();   
       return back();
     }
     public function index ()
     {
 
-    	$photos = image::all();
+    	$photos = photo::all();
       return view ('photos.index' , compact('photos'));
     }
     public function destroy($id)
 {
-  $image= image::where('id' , $id)->first();
-  $image->delete();
+  $photo= photo::where('id' , $id)->first();
+  $photo->delete();
   return back();
 
 }
 public function edit ($id)
 {
-   $image= image::find($id);
-   return view ('photos.edit' , compact('image'));
+   $photo= photo::find($id);
+   return view ('photos.edit' , compact('photo'));
 
 }
 public function update($id , Request $request)
 {
-    $image= image::find($id);
-    $photoName =rand().time().'.'.$request->image->getClientOriginalExtension();
-    $request->image->move(public_path('upload'), $photoName);
-    $image->image=$photoName ;
-    $image->product_id=$request->product_id;
+    $photo= photo::find($id);
+    $photoName =rand().time().'.'.$request->photo->getClientOriginalExtension();
+    $request->photo->move(public_path('upload'), $photoName);
+    $photo->photo=$photoName ;
+    $photo->product_id=$request->product_id;
+    $photo->team_id=$request->team_id;
 
-    $image-> save();
+    $photo-> save();
     return back();
 }
 }

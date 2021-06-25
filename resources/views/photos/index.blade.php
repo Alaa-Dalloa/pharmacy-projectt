@@ -13,10 +13,10 @@
             </tr>
           </thead>
           <tbody>
-          	@foreach( $photos as $image)
+          	@foreach( $photos as $photo)
             <tr>
               <td>{{ $image->id }}</td>
-              <td>{{ $image->image }}</td>
+              <td>{{ $photo->photo }}</td>
               <td>{{ $image->product_id }}</td>
               <td>
               	<a href="/photos/{{ $image->id }}/edit" class="btn btn-success">Edit</a>

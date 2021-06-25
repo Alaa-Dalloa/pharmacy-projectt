@@ -12,7 +12,7 @@
         <th>Count</th>
         <th>Position</th>
         <th>Bio</th>
-        <th>Image</th>
+        <th>Photo</th>
         <th>Controle</th>
       </tr>
     </thead>
@@ -25,7 +25,7 @@
         <td>{{ $team->email}}</td>
         <td>{{ $team->position}}</td>
         <td>{{ $team->bio}}</td>
-        <td>{{ $team->image}}</td>
+        <td>{{ $team->photo}}</td>
         <td><a href="/teams/{{ $team->id }}/edit" class="btn btn-success">Edit</a></td>
         <td><a href="/teams/{{ $team->id }}" class="btn btn-danger">Delete</a>
         </td>

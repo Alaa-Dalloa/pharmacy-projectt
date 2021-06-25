@@ -7,21 +7,21 @@
           <thead>
             <tr>
               <th>ID</th>
-               <th>Caliber</th>
+               <th>Gauge</th>
               <th>product_id</th>
               <th>Controller</th>
             </tr>
           </thead>
           <tbody>
-          	@foreach($calibers as $caliber)
+          	@foreach($gauges as $gauge)
             <tr>
-              <td>{{ $caliber->id }}</td>
-              <td>{{ $caliber->name }}</td>
+              <td>{{ $gauge->id }}</td>
+              <td>{{ $gauge->value }}</td>
               <td>{{ $product_id->product_id }}</td>
               <td>
-              	<a href="/calibers/{{ $caliber->id }}/edit" class="btn btn-success">Edit</a>
+              	<a href="/gauges/{{ $gauge->id }}/edit" class="btn btn-success">Edit</a>
 
-                  <a href="/calibers/{{ $caliber->id }}" class="btn btn-danger">Delete</a>
+                  <a href="/gauges/{{ $gauge->id }}" class="btn btn-danger">Delete</a>
               </td>
             </tr>
             @endforeach

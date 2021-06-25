@@ -3,49 +3,50 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\caliber;
-use App\product;
+use App\gauge;
+use App\Product;
+
 class Caliberscontroller extends Controller
 {
     public function create ()
     {  
        $products= product::all();
-       return view ('calibers.create' , compact('products'));
+       return view ('gauges.create' , compact('products'));
 
     }
     public function store (Request $request)
     {
-      $caliber= new caliber ;
-      $caliber->caliber = $request->caliber ;
-      $caliber->product_id=$request->product_id;
-      $caliber->save();   
+      $gauge= new gauge ;
+      $gauge->value = $request->value ;
+      $gauge->product_id=$request->product_id;
+      $gauge->save();   
       return back();
     }
     public function index ()
     {
 
-    	$calibers = caliber::all();
-      return view ('calibers.index' , compact('calibers'));
+    	$gauges = gauge::all();
+      return view ('gauges.index' , compact('gauges'));
     }
     public function destroy($id)
 {
-  $caliber= caliber::where('id' , $id)->first();
-  $caliber->delete();
+  $gauge= gauge::where('id' , $id)->first();
+  $gauge->delete();
   return back();
 
 }
 public function edit ($id)
 {
-   $caliber= caliber::find($id);
-   return view ('calibers.edit' , compact('caliber'));
+   $gauge= gauge::find($id);
+   return view ('gauges.edit' , compact('gauge'));
 
 }
 public function update($id , Request $request)
 {
-    $caliber= caliber::find($id);
-    $caliber->caliber=$request->caliber;
-    $caliber->product_id=$request->product_id;
-    $caliber-> save();
+    $gauge= gauge::find($id);
+    $gauge->value=$request->value;
+    $gauge->product_id=$request->product_id;
+    $gauge-> save();
     return back();
 }
 }

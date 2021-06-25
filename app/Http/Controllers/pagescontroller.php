@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Catigory ;
+
+ 
+
 
 class pagescontroller extends Controller
 {
@@ -10,12 +14,12 @@ class pagescontroller extends Controller
     {
     return view ('index');
     }   
-    public function home () 
+
+    public function login()
     {
-
-    	return view ('home');
-    }
-
+    return view ('auth.login');
+    
+    }      
 
 
 }

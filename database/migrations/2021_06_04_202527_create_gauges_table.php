@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCalibersTable extends Migration
+class CreateGaugesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateCalibersTable extends Migration
      */
     public function up()
     {
-        Schema::create('calibers', function (Blueprint $table) {
+        Schema::create('gauges', function (Blueprint $table) 
+        {
             $table->bigIncrements('id');
-             $table->string('caliber');
-              $table->bigInteger('product_id');
+            $table->string('value');
+            $table->bigInteger('product_id');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateCalibersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calibers');
+        Schema::dropIfExists('gauges');
     }
 }

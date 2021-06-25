@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Pharmacy</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Pharmacy') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,10 +22,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    Pharmacy
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -76,11 +77,11 @@
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            Calibers
+                            Gauges
                           </a>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route ('calibers.index') }}">All Calibers</a>
-                            <a class="dropdown-item" href="{{ route('calibers.create')  }}">Add Calibers</a>
+                            <a class="dropdown-item" href="{{ route ('gauges.index') }}">All Gauges</a>
+                            <a class="dropdown-item" href="{{ route('gauges.create')  }}">Add Ggauges</a>
                           </div>
                         </li>
                         <!-- Dropdown -->
@@ -104,7 +105,8 @@
                           </div>
                         </li>
                    </ul>
-
+                </div>   
+                  
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -137,7 +139,7 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
+                
             </div>
         </nav>
 

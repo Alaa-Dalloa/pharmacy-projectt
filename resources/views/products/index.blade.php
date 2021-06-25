@@ -18,6 +18,7 @@
         <th>Offers</th>
         <th>Catigory_id</th>
         <th>Brand_id</th>
+        <th>gauge_id</th>
         <th>Controle</th>
       </tr>
     </thead>
@@ -37,6 +38,7 @@
         <td>{{ $product->offers}}</td>
         <td>{{ $product->catigory_id}}</td>
         <td>{{ $product->brand_id}}</td>
+        <td>{{ $product->gauge_id}}</td>
         <td><a href="/products/{{ $product->id }}/edit" class="btn btn-success">Edit</a></td>
         <td><a href="/products/{{ $product->id }}" class="btn btn-danger">Delete</a>
         </td>

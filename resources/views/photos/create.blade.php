@@ -6,8 +6,8 @@
 	<form action=" {{ route ('photos.store') }}" method="POST" enctype="multipart/form-data">
 	  @csrf
 	  <div class="form-group">
-	    <label for="image">Photo:</label>
-	    <input type="file" class="form-control" name="image">
+	    <label for="photo">Photo:</label>
+	    <input type="file" class="form-control" name="photo" id="photo">
 	  </div>
 	   <div class="form-group">
 	    <label for="product_id">Product:</label>

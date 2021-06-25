@@ -27,6 +27,7 @@ class CreateProductsTable extends Migration
             $table->string('offers');
             $table->bigInteger('catigory_id');
             $table->bigInteger('brand_id');
+            $table->bigInteger('gauge_id');
 
 
             $table->timestamps();

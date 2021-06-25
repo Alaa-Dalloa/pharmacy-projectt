@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
 <div class= "container">
-   <h1 class="text-center">Add Calibers</h1>
+   <h1 class="text-center">Add Gauges</h1>
   <div class="box">
-	<form action=" {{ route('calibers.store') }}"method="POST" enctype="multipart/form-data">
+	<form action=" {{ route('gauges.store') }}"method="POST" enctype="multipart/form-data">
 	  @csrf
 	  <div class="form-group">
-	    <label for="caliber">caliber:</label>
+	    <label for="value">value:</label>
 	    <input type="string" 
 	    class="form-control"
-	     placeholder="Enter caliber" 
-	     id="caliber"
-	     name="caliber">
+	     placeholder="Enter value" 
+	     id="value"
+	     name="value">
 	   </div>
 	  <div class="form-group">
 	    <label for="product_id">Product:</label>

@@ -8,20 +8,23 @@ class Product extends Model
 {
     public function catigory()
     {
-    	return $this -> belongsTo('App\catigory' ,' catigory_id');
+    	return $this -> belongsTo('App\Catigory' ,' catigory_id');
     }
     public function brand()
     {
-    	return $this -> belongsTo('App\Brand' , 'brand_id');
+    	return $this -> belongsTo('App\brand' , 'brand_id');
     }
 
-    public function calibers (){
+    public function gauges ()
+    {
 
-   	return this-> hasMany('APP\Caliber' ,'product_id');
+   	return $this-> hasMany('APP\Gauge' ,'product_id');
    }
 
-   public function images (){
+   public function photos ()
+   {
 
-   	return this-> hasMany('APP\Image' ,'product_id');
+   	return $this-> hasMany('APP\Photo' ,'product_id');
    }
+
 }

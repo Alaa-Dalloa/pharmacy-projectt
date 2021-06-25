@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Catigory extends Model
+class gauge extends Model
 {
     public function products ()
    {
 
-      return $this-> hasMany('App\product' ,'catigory_id') ;
+    return $this-> hasMany('APP\product' ,'gauge_id') ;
    }
-
 }
