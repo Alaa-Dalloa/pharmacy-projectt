@@ -9,7 +9,7 @@ class Catigory extends Model
     public function products ()
    {
 
-      return $this-> hasMany('App\product' ,'catigory_id') ;
+      return $this-> hasMany('App\Product' ,'catigory_id') ;
    }
 
 }

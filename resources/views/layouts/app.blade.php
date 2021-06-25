@@ -77,16 +77,6 @@
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            Gauges
-                          </a>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route ('gauges.index') }}">All Gauges</a>
-                            <a class="dropdown-item" href="{{ route('gauges.create')  }}">Add Ggauges</a>
-                          </div>
-                        </li>
-                        <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                             Team
                           </a>
                           <div class="dropdown-menu">

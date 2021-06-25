@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Team;
-use App\Photo;
+use App\team;
+use App\photo;
 class Teamscontroller extends Controller
 {
     public function create ()
     {
-
-    	   return view ('teams.create');
+        $photos= photo::all();
+    	   return view ('teams.create' , compact('photos'));
 
     }
     public function store (Request $request)
@@ -21,7 +21,6 @@ class Teamscontroller extends Controller
       $team->email=$request->email;
       $team->position=$request->position;
       $team->bio=$request->bio;
-      //geerate a new name
       $photoName =rand().time().'.'.$request->photo->getClientOriginalExtension();
       $request->photo->move(public_path('upload'), $photoName);
       $team->photo=$photoName ;
@@ -42,9 +41,10 @@ class Teamscontroller extends Controller
      return back();
    }
    public function edit ($id)
-{
+{ 
+  $photos= photo::find($id);
 	$team= team::find($id);
-	return view ('teams.edit' ,compact('team'));
+	return view ('teams.edit' ,compact('team') , compact('photos'));
 }
 public function update($id , Request $request)
 
@@ -58,8 +58,7 @@ public function update($id , Request $request)
       $photoName =rand().time().'.'.$request->photo->getClientOriginalExtension();
       $request->photo->move(public_path('upload'), $photoName);
       $team->photo=$photoName ;
-      
-	  $team->save();   
+	    $team->save();   
       return back();
 }
 

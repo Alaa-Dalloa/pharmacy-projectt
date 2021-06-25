@@ -29,7 +29,6 @@ class CreateProductsTable extends Migration
             $table->bigInteger('brand_id');
             $table->bigInteger('gauge_id');
 
-
             $table->timestamps();
         });
     }

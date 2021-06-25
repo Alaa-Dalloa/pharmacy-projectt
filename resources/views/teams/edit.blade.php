@@ -33,7 +33,7 @@
 	  </div>
 	 <div class="form-group">
 	    <label for="photo">photo:</label>
-	    <input type="file" class="form-control" name="photo" id="photo" value="{{ $team->photo}} ">
+	    <input type="file" class="form-control" name="photo" value="{{ $team->photo}} ">
 	  </div>
 	 
 	  <button type="submit" class="btn btn-primary">Update</button>

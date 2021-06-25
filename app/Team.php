@@ -8,6 +8,6 @@ class Team extends Model
 {
         public function Photo()
     {
-     return $this -> belongsTo('App\Photo' , 'team_id');
+     return $this -> belongsTo('App\photo' , 'team_id');
     }
 }

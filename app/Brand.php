@@ -9,7 +9,7 @@ class Brand extends Model
    public function products ()
    {
 
-   	return $this-> hasMany('APP\product' ,'brand_id') ;
+   	return $this-> hasMany('App\Product' ,'brand_id') ;
    }
 
 }

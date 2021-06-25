@@ -12,19 +12,13 @@ class Product extends Model
     }
     public function brand()
     {
-    	return $this -> belongsTo('App\brand' , 'brand_id');
+    	return $this -> belongsTo('App\Brand' , 'brand_id');
     }
-
-    public function gauges ()
-    {
-
-   	return $this-> hasMany('APP\Gauge' ,'product_id');
-   }
 
    public function photos ()
    {
 
-   	return $this-> hasMany('APP\Photo' ,'product_id');
+   	return $this-> hasMany('App\Photo' ,'product_id');
    }
 
 }

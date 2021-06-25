@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Photo;
-use App\Product;
-use App\Team;
+use App\photo;
+use App\product;
 class Imagescontroller extends Controller
 {
     public function create ()
     {
       $products = product::all();
-      $teams = team::all();
-       return view ('photos.create' , compact('products') , compact('teams'));
+       return view ('photos.create' , compact('products') );
 
     }
     public function store (Request $request)
@@ -23,7 +21,6 @@ class Imagescontroller extends Controller
       $request->photo->move(public_path('upload'), $photoName );
       $photo->photo=$photoName ;
       $photo->product_id=$request->product_id;
-      $photo->team_id=$request->team_id;
       $photo->save();   
       return back();
     }
@@ -53,8 +50,6 @@ public function update($id , Request $request)
     $request->photo->move(public_path('upload'), $photoName);
     $photo->photo=$photoName ;
     $photo->product_id=$request->product_id;
-    $photo->team_id=$request->team_id;
-
     $photo-> save();
     return back();
 }

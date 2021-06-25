@@ -62,14 +62,6 @@
 	    	<option value="{{$one->id}}">{{$one->name}}</option>
 	    	@endforeach
 	    </select>
-	    <div class="form-group">
-	    <label for="gauge_id">Gauge:</label>
-	    <select class="form-control" name="gauge_id">
-	    	@foreach($gauges as $one)
-	    	<option value="{{$one->id}}">{{$one->name}}</option>
-	    	@endforeach
-	    </select>
-	  </div>
 	  <button type="submit" class="btn btn-primary">Updat</button>
 	</form>
   </div>

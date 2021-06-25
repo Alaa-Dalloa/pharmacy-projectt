@@ -7,7 +7,7 @@
           <thead>
             <tr>
               <th>ID</th>
-              <th>photos</th>
+              <th>photo</th>
               <th>product_id</th>
               <th>Controller</th>
             </tr>
@@ -15,13 +15,13 @@
           <tbody>
           	@foreach( $photos as $photo)
             <tr>
-              <td>{{ $image->id }}</td>
+              <td>{{ $photo->id }}</td>
               <td>{{ $photo->photo }}</td>
-              <td>{{ $image->product_id }}</td>
+              <td>{{ $photo->product_id }}</td>
               <td>
-              	<a href="/photos/{{ $image->id }}/edit" class="btn btn-success">Edit</a>
+              	<a href="/photos/{{ $photo->id }}/edit" class="btn btn-success">Edit</a>
 
-                  <a href="/photos/{{ $image->id }}" class="btn btn-danger">Delete</a>
+                  <a href="/photos/{{ $photo->id }}" class="btn btn-danger">Delete</a>
               </td>
             </tr>
             @endforeach

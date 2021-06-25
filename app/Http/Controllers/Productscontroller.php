@@ -3,18 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
-use App\Catigory;
-use App\Brand;
-use App\gauge;
+use App\product;
+use App\catigory;
+use App\brand;
 class Productscontroller extends Controller
 {
     public function create ()
     {
          $categories= catigory::all();
          $brands= brand::all(); 
-         $gauges= gauge::all();
-    	   return view ('products.create' , compact ('categories'), compact ('brands') , compact('gauges'));  
+    	   return view ('products.create' , compact ('categories'), compact ('brands'));  
     }
     public function store (Request $request)
     {
@@ -31,17 +29,14 @@ class Productscontroller extends Controller
       $product->offers    =$request->offers;
       $product->catigory_id=$request->catigory_id;
       $product->brand_id   =$request->brand_id;
-      $product->gauge_id   =$request->gauge_id;
-
-      
-	  $product->save();   
+	    $product->save();   
       return back();
 
     }
 
     public function index ()
     {
-      $products =product::all();
+      $products = product::all();
       return view ('products.index' , compact('products'));
     }
    public function destroy($id)
@@ -55,9 +50,8 @@ class Productscontroller extends Controller
   {
   $categories= catigory::find($id);
   $brands= brand::find($id);
-  $gauges= gauge::find($id);
 	$product= product::find($id);
-	return view ('products.edit' , compact('product') , compact ('categories'), compact ('brands') , compact('gauges'));
+	return view ('products.edit' , compact('product') , compact ('categories'), compact ('brands'));
   }
 public function update($id , Request $request)
 
@@ -75,8 +69,7 @@ public function update($id , Request $request)
       $product->offers      =$request->offers;
       $product->catigory_id=$request->catigory_id;
       $product->brand_id   =$request->brand_id;
-      $product->gauge_id   =$request->gauge_id;
-	     $product->save();  
+	    $product->save();  
 	     return back (); 
 }
 
