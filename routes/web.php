@@ -13,6 +13,10 @@
 
 Route::get('/', 'pagescontroller@index');
 Route::get('/login', 'pagescontroller@login')->name('auth.login');
+Route::get('/About', 'pagescontroller@About');
+Route::get('/search-resulte', 'pagescontroller@search');
+
+
 
 Auth::routes();
 

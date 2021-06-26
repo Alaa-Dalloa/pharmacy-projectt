@@ -209,28 +209,42 @@
             <div class="nonloop-block-3 owl-carousel">
 
               <div class="text-center item mb-4">
-                <a href="#"> <img src="images/تنزيل.jfif" alt="Image"></a>
+                <a href="#"> <img src="upload/{{$one->photo }}"></a>
                 <h3 class="text-dark"><a href="shop-single.html">{{$one->name}}</a></h3>
                 <p class="price">$120.00</p>
               </div>
-              <div class="text-center item mb-4">
-                <a href="#"> <img src="images/مرهم-بانثينول.png" alt="Image"></a>
-                <h3 class="text-dark"><a href="shop-single.html">{{$one->name}}</a></h3>
-                <p class="price">$120.00</p>
-              </div>
-
-              
-
-              
-
-              
-
             </div>
           </div>
           @endforeach
         </div>
       </div>
     </div>
+
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-12">
+            <h2 class="text-uppercase"><span> {{ $catigory_2->name }} </span></h2>
+          </div>
+        </div>
+        <div class="row">
+          @foreach($catigory_2->products as $two)
+          <div class="col-md-12 block-3 products-wrap">
+            <div class="nonloop-block-3 owl-carousel">
+
+              <div class="text-center item mb-4">
+                <a href="#"><img src="upload/{{$two->photo }}"></a>
+                <h3 class="text-dark"><a href="shop-single.html">{{$two->name}}</a></h3>
+                <p class="price">$120.00</p>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+    </div>
+
 
     <div class="site-section">
       <div class="container">
