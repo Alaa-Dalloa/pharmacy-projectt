@@ -206,7 +206,6 @@
         <div class="row">
           <div class="col-md-12 block-3 products-wrap">
             <div class="nonloop-block-3 owl-carousel">
-
               <div class="text-center item mb-4">
                 <a href="shop-single.html"> <img src="images/product_03.png" alt="Image"></a>
                 <h3 class="text-dark"><a href="shop-single.html">Umcka Cold Care</a></h3>

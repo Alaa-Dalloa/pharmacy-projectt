@@ -31,10 +31,6 @@
 	    <label for="bio">Bio:</label>
 	    <input type="string" class="form-control" placeholder="Enter bio" id="bio"  value="{{ $team->bio}} " name="bio">
 	  </div>
-	 <div class="form-group">
-	    <label for="photo">photo:</label>
-	    <input type="file" class="form-control" name="photo" value="{{ $team->photo}} ">
-	  </div>
 	 
 	  <button type="submit" class="btn btn-primary">Update</button>
 	</form>

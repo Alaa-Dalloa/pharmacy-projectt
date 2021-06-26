@@ -10,8 +10,4 @@ class Photo extends Model
     {
     	return $this -> belongsTo('App\Product' , 'product_id');
     }
-     public function Team()
-    {
-     return $this -> belongsTo('App\Team' , 'team_id');
-    }
 }

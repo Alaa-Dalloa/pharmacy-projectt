@@ -17,9 +17,6 @@ class CreatePhotosTable extends Migration
             $table->bigIncrements('id');
             $table->string('photo');
             $table->bigInteger('product_id');
-            $table->bigInteger('team_id');
-
-
             $table->timestamps();
         });
     }

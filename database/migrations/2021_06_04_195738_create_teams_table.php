@@ -20,7 +20,6 @@ class CreateTeamsTable extends Migration
             $table->string('email');
             $table->string('position');
             $table->string('bio');
-            $table->string('photo');
             $table->timestamps();
         });
     }
